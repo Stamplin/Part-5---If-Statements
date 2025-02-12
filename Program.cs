@@ -44,28 +44,21 @@
             //each hour is +2$
             //max free for the day is 20$ for the day
 
-            int time, fee, totalFee;
-            Console.WriteLine("Enter the number of hours parked: ");
-            time = Convert.ToInt32(Console.ReadLine());
-            fee = 4;
-            //fix time to minutes???
-
-            if (time > 1)
+            int minutes, addionalHours, totalCost;
+            Console.WriteLine("Enter the number of minutes you have parked: ");
+            minutes = Convert.ToInt32(Console.ReadLine());
+            //round to closest hour
+            addionalHours = Convert.ToInt32(Math.Ceiling((double)minutes / 60));
+            totalCost = 4 + ((addionalHours * 2));//make it so it dont count the first hour
+            if (minutes < 60)
             {
-                totalFee = fee + ((time - 4) * 2);
-                Console.WriteLine("Total fee: " + totalFee.ToString("C"));
+                totalCost = 4;
             }
-            
-            //make the adding work
-            
-            else
+            else if (totalCost > 60)
             {
-                totalFee = fee;
-                Console.WriteLine("Total fee: " + totalFee.ToString("C"));
+                totalCost = totalCost;
             }
-            
-
-
+            Console.WriteLine("Your total cost is: " + totalCost + "$");
 
             Console.ReadLine();
         }
