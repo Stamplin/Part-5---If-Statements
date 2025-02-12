@@ -61,8 +61,41 @@
             }
             Console.WriteLine("Your total cost is: " + totalCost + "$");
 
-            //part 3 - Hurricane
+            //press enter to go to part 3
+            Console.WriteLine("Press enter to continue to part 3");
+            Console.ReadLine();
+            Console.Clear();
 
+            //part 3 - Hurricane
+            //use switch statement instead of if statement
+            int category;
+            Console.WriteLine("Enter the category of the hurricane (input 1-5): ");
+            category = Convert.ToInt32(Console.ReadLine());
+            switch (category)
+            {
+                case 1:
+                    Console.WriteLine("Category 1: Tropical");
+                    Console.WriteLine("Winds 74-95 mph (64-82 kt or 119-153 km/hr).");
+                    break;
+                case 2:
+                    Console.WriteLine("Category 2: Tropical");
+                    Console.WriteLine("Winds 96-110 mph (83-95 kt or 154-177 km/hr).");
+                    break;
+                case 3:
+                    Console.WriteLine("Category 3: Tropical");
+                    Console.WriteLine("Winds 111-129 mph (96-112 kt or 178-208 km/hr).");
+                    break;
+                case 4:
+                    Console.WriteLine("Category 4: Tropical");
+                    Console.WriteLine("  Winds 130-156 mph (113-136 kt or 209-251 km/hr).");
+                    break;
+                case 5:
+                    Console.WriteLine("Category 5: Tropical");
+                    Console.WriteLine(" Winds 157 mph or higher (137 kt or higher or 252 km/hr or higher).");
+                    break;
+
+                    
+            }
             Console.ReadLine();
         }
     }
