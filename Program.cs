@@ -49,7 +49,8 @@
             minutes = Convert.ToInt32(Console.ReadLine());
             //round to closest hour
             addionalHours = Convert.ToInt32(Math.Ceiling((double)minutes / 60));
-            totalCost = 4 + ((addionalHours * 2));//make it so it dont count the first hour
+            //the (-1) make it so it dont count the first hour
+            totalCost = 4 + ((addionalHours - 1) * 2);
             if (minutes < 60)
             {
                 totalCost = 4;
@@ -59,6 +60,8 @@
                 totalCost = totalCost;
             }
             Console.WriteLine("Your total cost is: " + totalCost + "$");
+
+            //part 3 - Hurricane
 
             Console.ReadLine();
         }
